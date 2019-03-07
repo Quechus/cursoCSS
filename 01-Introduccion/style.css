@@ -1,0 +1,16 @@
+/* Pagina para estudiar la sintaxis de CSS:http://apps.workflower.fi/vocabs/css/es  */
+
+/*Variables CSS*/
+:root{
+    --color: red;
+}
+
+body/*Selector(Indican a que elemento HTML le vamos a declarar el estilo)*/{
+   /*Propiedad*/ background:/*Valor*/ red;
+    color: white;
+}/*Bloque*/
+
+h1{
+    background: white;
+    color: var(--color)/*Se está utilizando la variable*/;
+}
