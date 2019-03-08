@@ -1,0 +1,33 @@
+/* Selectores:Simple,Compuestos */
+/* Simples:apuntan a una etiqueta HTML/XML */
+/* EJEMPLO */
+
+/* h1{
+    background: yellow;
+    color:red;
+    /* font-size: 5rem; */
+ 
+/* Ya con la clase "title" como atributo en "h1", llamariamos h1 como: */
+/* Selector con CLASE (VENTAJA ES REUTILIZABLE) */
+.title{
+    background: yellow;
+    color: red;
+}
+/* Mismo caso con p */
+.description{
+    background: lime;
+    color: blue;
+}
+.center{
+    text-align: center;
+}
+.♠{
+    background: skyblue;
+}
+/* Selector con un id */
+#title2{
+    background: orange;
+}
+/*https://meyenweb.com para copiar el archivo css y remover el estado por defecto de css del navegador   */
+/* o puedes utilizar normalize (RECOMENDABLE) para reinicializar tus estilos base en cualquier navegador */
+

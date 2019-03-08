@@ -1,0 +1,41 @@
+:root{
+    --color-title:green;
+    --color-subtilte:purple;
+}
+/* SEPARADO:UBICA cualquier clase "list" que tenga la clase "list-item" (HIJO DE "list") */
+/* el ESPACIO EN BLANCO indica que es un descendiente */
+.list .list-item{
+    color: red;
+}
+/*JUNTOS:UBICA las etiquetas que tengan las 2 clases como atributo y les aplica el estilo */
+.list.list-item{
+    color:blue;
+}
+/*selecciona a todo HIJO DIRECTO (Selecciona a todo ul que sea hijo directo de li)*/
+li > ul  {
+    display: none;
+}
+/* Aparesca la ul cuando se acerca el raton */
+li:hover ul{
+    display: block;
+}
+/* --------------------------------------------------------------------------------------------- */
+/* Selector hermano siguiente selecciona al elemento que este justo despues del otro */
+.subtitle{
+    font-size: .5em;
+    margin-top: -2em;
+}
+.title-1{
+    color:var(--color-title);
+}
+.title-2{
+    color: var(--color-subtilte);
+}
+/* Quiero que el subtitulo de h2 y h3 sean del mismo color que su titulo (aunque tengan la misma clase)*/
+.title-1 + .subtitle{
+    color:var(--color-title)
+}
+.title-2 + .subtitle{
+    color: var(--color-subtilte)
+}
+/* Hace que EL HIJO SIGUIENTE(subtitle) de la clase padre sea al que se le realize el cambio.Osease al siguiente subtitle  */

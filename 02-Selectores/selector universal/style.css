@@ -1,0 +1,14 @@
+/* Aplica color rojo a las letras de TODAS las etiquetas */
+*{
+    color: green;
+}
+/* Seleccionas "ul". Al poner un espacio estas diciendo que el selector que pongas a la derecha es "HIJO" de "ul" */
+ul * {
+    background: blue;
+    /* propiedad para que el usuario vea contenido */
+    display: none
+}/*Aqui estas seleccionando TODO lo que este dentro de ul*/
+/* seleccionar el ultimo elemento de la lista */
+.last{
+    display: block
+}

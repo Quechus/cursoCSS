@@ -1,0 +1,8 @@
+/* Si quiero que tanto el parrafo como el titulo sean rojos..... */
+/* Una forma es que compartan la misma clase */
+/* Pero habra veces en las que no podras, por ello usas la AGRUPACION */
+.title,
+.parrafo{
+    color: red;
+}
+/*Estas aplicando estilo a las etiquetas que tengan la clase title o la clase parrafo*/
