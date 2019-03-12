@@ -1,0 +1,19 @@
+[href*="html"]{
+    text-decoration: none;
+    color: yellow;
+}
+/* TEMAS */
+.class-select {
+    background: blue;
+    color: aqua
+}
+.hide-clases>ul{
+    display: none;
+}
+/* Interaccion con temas para ver subtemas */
+.selectores-class:hover ul{
+    display: block;
+}
+.introduccion-class:hover ul{
+    display: block;
+}

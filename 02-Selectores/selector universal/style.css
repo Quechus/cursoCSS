@@ -6,9 +6,10 @@
 ul * {
     background: blue;
     /* propiedad para que el usuario vea contenido */
-    display: none
+    display: none;
 }/*Aqui estas seleccionando TODO lo que este dentro de ul*/
 /* seleccionar el ultimo elemento de la lista */
 .last{
-    display: block
+    color: white;
+    display: block;
 }

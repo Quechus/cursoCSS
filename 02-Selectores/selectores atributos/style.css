@@ -1,0 +1,41 @@
+/* Para seleccionar un atributo utilizamos "[attr="value"]" */
+[type="email"]{
+    border: 1px solid black;
+}
+[type="submit"]{
+    background: blue;
+    color: white;
+}
+/* o solo el atributo */
+[required]{
+    border: solid red
+}
+/* --------------------------------------------------------------------------------------------- */
+/* Para seleccionar los atributos cuyos valores "comienzan con algun caracter" utilizamos"^" antes del "=" */
+[href]{
+    background: url(./img/external-link.png) no-repeat center right / 1rem;
+    padding-right:  1.2rem;
+    margin: 0.2cm;
+}
+[href^="./"],[href^="https://ed.team"]{
+    color: red;
+    background: none;
+}
+/* --------------------------------------------------------------------------------------------- */
+/* Para seleccionar los atributos cuyos valores "terminan con algun caracter" utilizamos"$" antes del "=" */
+[href$="pdf"]{
+    background: url(./img/pdf.png) no-repeat center left / 1rem;
+    padding-left: 1.2rem;
+    margin: 0.2cm;
+}
+[href$="mp4"]{
+    background: url(./img/ipod.png) no-repeat center left / 1rem;
+    padding-left: 1.2rem;
+    margin: 0.2cm;
+}
+/* --------------------------------------------------------------------------------------------- */
+/* Para seleccionar los atributos cuyos valores "contengan con algun caracter" utilizamos"*" antes del "=" */
+[class*="button-"]{
+    background: green;
+    text-decoration:none;
+}
