@@ -1,0 +1,93 @@
+/* Podemos camiar la posicion de un elemento inline y bloque pero no su naturaleza  */
+/* inline: no crea nuevos elementos(lineas/los elementos se ponen uno a LADO de otro)(solo SE LES PUEDE AJUSTAR width) */
+/* bloque: crean nuevas lineas para cada elemento(espacio abajo) (tienen un width Y heigth) */
+h1{
+    background: yellow; /*puedes usar background para ubicar la "caja" del elemento*/
+    display: inline; /*Transforma al bloque en elemento inline (SOLO EN CSS)*/
+}
+p{
+    background: pink;
+   
+    /*display: none; ---- no muesta al elemento*/
+}
+span{
+    background: yellow;
+     /*display: block; ---- Transforma al elemento inline en BLOCK (SOLO EN CSS)*/
+    display: inline-block; /*combina las propiedades inline y block*/
+    width: 25px;
+    height: 100px;
+}/*PROPIEDAD DISPLAY*/
+/* ---------------------------------------------------------------------------------------------- */
+/*ELEMENTOS DE BLOQUE (BOX MODEL) --- cajas en pantalla*/
+/* cajas (content box,padding box, border box, margin) */
+.box{
+    background: gold;
+    background-clip: content-box; /*determina hasta que caja va a colocar el background*/
+    /* box model */
+    width: 300px;
+    height: 200px; /*Content Box*/
+    padding: 100px; /*Padding box*/
+    border: 10px solid black; /*border box*/
+    margin: 10px;
+
+    box-sizing: content-box; /*adapta el tamaño de la caja (calculo) respecto a su border box o content*/ 
+}
+/* ---------------------------------------------------------------------------------------------- */
+/* MARGIN */
+[class^="box-"]{
+    background: yellow;
+    padding: 50px;
+    width: 300px;
+}
+.box-1{
+    /* margin-top: 50px;
+    margin-right: 100px;
+    margin-bottom: 200px;
+    margin-left: 30px; */
+    /*margin: 50px 100px 200px 30px; /*Sentido de las manecillas de reloj*/
+     margin: 80px 50px; /*100px ARRIBA Y ABAJO 50px DER E IZQ*/
+}
+.box-2{
+    margin-top: -100px; /*negativo=reduce area*/
+    margin-left: 25%; /*(50% del papa(body))*/
+}
+.container{
+    background: limegreen;
+    width: 600px;
+    margin-top: 10px;
+    margin-left: auto;/*CENTRA,(DEBE TENER WIDTH DEFINIDO)*/
+    margin-right: auto;
+    border: 10px solid red;
+}
+.item{
+     margin-left:-20px;
+    margin-right: -20px; 
+    border: 1px solid blue;
+}
+/* ---------------------------------------------------------------------------------------------- */
+/* PADDING */
+[class^="article"]{
+    background: yellow;
+    padding: 100px; /*MISMAS PROPIEDADES DE COLOCACION QUE MARGIN(manecillas del reloj)(top,button,right,left)(Porcentaje(del papa body)*/
+    width: 500px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.video{
+    background: gray;
+    padding: 10%; /*Originalmente no tiene un tamaño puesto que no hay contenido.Pero asignandole padding dependiendo del porcentaje del padre,se puede GENERAR;y por lo tanto SE ADAPTARÁ al tamaño de la pagina*/
+}
+/* DIMENSIONES */
+/* box-sizing: border-box------>indica que el tamaño de tu bloque sera igual al width y heigth que      se asigne;y las cajas(content,padding,border) se adaptaran para que su suma total sea igual al W     y L.
+    box-sizing: content-box------>especifica que el W y L sera igual a la SUMA de CADA UNA de las cajas.
+    NOTA:es recomendable aplicar box-sizing en el body.
+    NOTA:el BODY solo abarca hasta donde TERMINA el contenido.
+    ------para calcular la altura que tendra el body se aplica "heigth" y el valor se puede ingresar en "#vw" (viewport width DE LA PANTALLA) ó "vh"(viewport heigth)
+    o aplicarle un MINIMO con "min-heigth".
+    o un MAXIMO "max"
+
+    Aplicar PORCENTAJE CON HEIGTH es un problema puesto que debes tener alturas especificas para considerar al PAPÁ y no AUTOMATICAS para que se efectue.
+
+    CSS TIENE PROBLEMAS EN POSICIONAMIENTOS VERTICALES
+*/
+
