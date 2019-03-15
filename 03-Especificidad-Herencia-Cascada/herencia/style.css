@@ -1,0 +1,26 @@
+span{
+    font-size: .5em;
+}
+
+/* KEYWORD: "initial" resetear un elemento a su valor inicial*/
+/* KEYWORD: "inherit" obligar a que un elemento herede una propiedad */
+
+p{
+    color: rgb(0, 162, 255);
+}
+a{
+    color: inherit /*Se esta obligando que herede el color de su padre*/
+}
+
+ul{
+    color:initial; /*los li al ser hijos heredan el color de ul por eso son rojos*/
+    padding-right: 5rem;
+}
+.last{
+    color:red;
+}
+.last span{
+    font-size: inherit; /*hace que su tamaño sea igual al de su padre (antecesor) (li)*/
+}
+
+

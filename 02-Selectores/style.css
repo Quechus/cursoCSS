@@ -1,3 +1,5 @@
+/* Enlazando archivo CSS en otro */
+@import 'normalize.css';
 /* Selectores:Simple,Compuestos */
 /* Simples:apuntan a una etiqueta HTML/XML */
 /* EJEMPLO */

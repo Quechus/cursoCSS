@@ -1,0 +1,18 @@
+/* especificidad=1 */
+p{
+    color:red;
+}
+/* especificidad=11 */
+.post p{
+    color: green;
+}
+/* especificidad=111 */
+#main .post p{
+    color:purple;
+}
+/* A medida que aumenta la especificidad, CSS le tiene mas en consideracion que los demas cambios */
+/* especificidad=112 */
+div#main .post p{
+    color: gold;
+}
+/* Como nota se considera un mal habito el utilizar mas de 2 niveles de especificidad */

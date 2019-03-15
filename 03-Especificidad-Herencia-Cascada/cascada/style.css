@@ -1,0 +1,12 @@
+p{
+    font-size: 5em;
+    color: greenyellow;
+    background: black !important; 
+    /* El valor important hace que el valor asignado a dicha propiedad se haga OBLIGATORIAMENTE, sin importar la cascada o especificidad */
+}
+/* Al venir en cascada, el cambio que este mas abajo es el que aplica (Solo si tienen la misma especificidad) */
+p{
+    font-size: 10em;
+    color: seagreen;
+    background: crimson;
+}
