@@ -29,7 +29,7 @@ span{
     padding: 100px; /*Padding box*/
     border: 10px solid black; /*border box*/
     margin: 10px;
-
+    
     box-sizing: content-box; /*adapta el tamaño de la caja (calculo) respecto a su border box o content*/ 
 }
 /* ---------------------------------------------------------------------------------------------- */
@@ -84,9 +84,9 @@ span{
     NOTA:el BODY solo abarca hasta donde TERMINA el contenido.
     ------para calcular la altura que tendra el body se aplica "heigth" y el valor se puede ingresar en "#vw" (viewport width DE LA PANTALLA) ó "vh"(viewport heigth)
     o aplicarle un MINIMO con "min-heigth".
-    o un MAXIMO "max"
+    o un MAXIMO "max-heigth"
 
-    Aplicar PORCENTAJE CON HEIGTH es un problema puesto que debes tener alturas especificas para considerar al PAPÁ y no AUTOMATICAS para que se efectue.
+    Aplicar PORCENTAJE CON HEIGTH es un problema puesto que debes tener alturas ESPECIFICAS para considerar al PAPÁ y no AUTOMATICAS para que se efectue.
 
     CSS TIENE PROBLEMAS EN POSICIONAMIENTOS VERTICALES
 */

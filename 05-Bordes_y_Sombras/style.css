@@ -1,0 +1,78 @@
+:root{
+    --border-radius-x:70px;
+    --border-radius-y:150px;
+}
+/*Para evitar problemas de maquetacion es bueno definir para TODOS los elementos a realizar un tamaño definido que no se altere por agregar ya sea el PADDING o el BORDER */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+.box{
+    width: 400px;
+    height: 300px;
+    background: red;
+    margin: 100px auto;
+    padding: 100px;
+    border: 10px dotted black; /*gracias al box-sizing cualquier aumento que no exceda el (w,h) mantendra la caja en su misma dimension*/
+}
+/* Con "dotted" el borde sale punteado.Esto para ver que el borde se dibuja dentro de la caja;siendo una propiedad interna de la caja */
+/* -----PROPIEDADES DEL BORDER--------------------------------------------------------------- */
+.prop{
+    /*otra forma de escribir el diseño del border en propiedades diferentes*/
+    border-width: 10px 10px 10px 10px;
+    border-style: solid dotted dashed double;
+    border-color: black transparent transparent transparent;
+    /*border tiene el mismo uso deposicionamiento(top,right,left,bottom) que margin y padding*/
+    /*tambien tiene el mismo dentido de MANECILLAS DE RELOJ que margin y padding*/
+    /*si solo implementas "border-style"; notaras que su width y su color tienen parametros por defecto*/
+}
+/*-----BORDER RADIUS-----------------------------------------------------------------------------*/
+.box1{
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    background: black;
+    border:40px solid brown;
+    border-radius: 100px 50px 80px 30px; /*Da un redondeo a c/u de las esquinas de la caja*/
+    /*MANECILLAS DE RELOJ (top-left,top-right,bottom-right,boyyom-left)*/
+    border-top-left-radius: 200px 50px;
+    /*No solo realizas circulos;sino tambien elipses*/
+}
+/*YOUTUBE LOGO*/
+.youtube{
+    width: 400px;
+    height: 250px;
+    margin: 100px auto;
+    background: red;
+
+    padding: 25px;
+
+    /* border-top-left-radius: var(--border-radius-x) var(--border-radius-y);
+    border-top-right-radius: var(--border-radius-x) var(--border-radius-y);
+    border-bottom-right-radius: var(--border-radius-x) var(--border-radius-y);
+    border-bottom-left-radius: var(--border-radius-x) var(--border-radius-y); */
+
+    border-radius: var(--border-radius-x)/var(--border-radius-y);/*forma abreviada(tambien influye MANECILLAS DE RELOJ)*/
+
+    outline: 50px solid greenyellow; /*realiza lo mismo que el borde pero por fuera de la caja*/
+    /*NO ALTERA A LA ESTRUCTURA DE LA CAJA*/
+}
+.play{
+    width: 200px;
+    height: 200px;
+    margin-left: 140px;
+    background-color: transparent;
+    border: 100px solid;
+    border-color: transparent transparent transparent white ;
+}
+.box2{
+    width: 50px;
+    height: 50px;
+    background: orchid;
+    margin: 100px auto;
+    /*box-shadow: h-offset(movimiento horizontal) v-offset(movimiento vertical) blur(difuminado) spread(expansion) color | inset */
+    box-shadow: 100px 100px 50px 0 red,
+                0 0 0 5px black, /*Puede utilizarse para hacer bordes sin AUMENTAR tamaño de caja*/
+                0 0 0 10px yellow,
+                0 0 0 15px rgb(88, 4, 95) inset;/*puedes generar MAS DE UNA sombra*/
+                /*INSET es lo OPUESTO a todo lo hecho*/
+}
