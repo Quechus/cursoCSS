@@ -2,13 +2,21 @@
     text-decoration: none;
     color: yellow;
 }
+/*Estructura*/
+.header{
+    padding-left: 50px;
+}
 /* TEMAS */
 .class-select {
-    background: blue;
-    color: aqua
+    background-color: blue;
+    color: aqua;
 }
 .hide-clases>ul{
     display: none;
+}
+.alinear{
+    display: inline-block;
+    padding: 5px;
 }
 /* Interaccion con temas para ver subtemas */
 .selectores-class:hover ul{
@@ -24,5 +32,8 @@
     display: block;
 }
 .BS-class:hover ul{
+    display: block;
+}
+.Background-class:hover ul{
     display: block;
 }

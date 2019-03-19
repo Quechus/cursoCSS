@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:green;
+    /*NOTA se pueden añadir los fondos que quieras dentro de un solo bloque*/
+    background-image: url(./img/ipod.png),url(./img/slipknot.jpg);  
+    background-repeat: no-repeat; /*En que forma se muestra el fondo*/
+    background-position: 0 0,center top;
+    background-size: 10%,cover;
+    background-attachment: fixed; /*background respecto al viewport--"fixed" hace que el background no se mueva aunque realices SCROLL*/
+}
+.box{
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    border: 10px solid black;
+    margin: 100px auto;
+    background-image: url(./img/10175_front.jpg);
+    background-clip: border-box; /*desde que parte de la caja se muestra la img*/
+    background-origin: border-box;/*Desde donde comienza la imagen*/
+    box-shadow: 20px 10px 50px -7px black;
+    background-size: 500px 300px; /*Tamaño del fondo (width/height)*//*(contain,cover,auto)*/
+}
+.box-2{
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    border: 10px solid yellowgreen;
+    margin: 100px auto;
+    background-image: url(./img/abstract-backlit-conceptual-1722072.jpg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center; /*(x y)------(left/center/right <unit> top/center/bottom <unit>)*/
+    /*NOTA se pueden añadir los fondos que quieras dentro de un solo bloque*/
+}
+/*ATAJO: background: image position/size repeat attachment origin clip*/
+/*background:color/image
+background-color:
+background-image:
+background-repeat:
+background-clip:
+background-origin:
+background-size:
+background-position:
+background-attachment:
+*/
