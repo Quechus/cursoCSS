@@ -1,0 +1,47 @@
+/* UNIDADES em y rem: em--->tamaño de fuente del contexto/ rem--->tamaño fuente del root */
+html{
+    font-size: 1rem;
+}
+h1{
+    font-size: 4em; /*16pixeles (tamaño de nav)---1em*/
+                    /*em influye en su contexto (en el ejemplo la letra seria 4 veces el tamaño del padre)*/
+    font-size: 2rem;/*relativo a la raiz (html)*/
+}
+/*----------------------------------------------------------------------------------------------*/
+.align{
+    direction: rtl; /*"right to left" alinea el texto en ese orden*/
+    direction: ltr; /*"left to right"*/
+    text-indent: 2em;/*identar linea inicial del txt*/
+    text-align:justify;/*alinear texto (left/right/center/start/end/justify)*/
+    text-align-last: left; /*alinea solo la ultima linea*/
+    line-height: 1.5em;/*Alineado vertical*/
+    vertical-align:middle /*baseline/top/middle/bottom*/ ;/*Alineado vertical mas detallado (incluye imagenes)*/
+    letter-spacing: 0px;/*Espaciado de letras*/
+    word-spacing: 0px;/*espaciado de palabras*/
+    /*-----------------------------------------------------------------------------------------*/
+    text-decoration-line:none;/*overline/underline/none/linetrought*/ /*lineas horizontales en el texto*/
+    text-decoration-color: black;
+    text-decoration-style: none;
+    text-decoration: underline none red;/*puedes incluir varias lineas*/
+    /*-----------------------------------------------------------------------------------------*/
+    text-shadow: 0 0 0 black;/*(x y blur color)*/
+}
+.css{
+    background: white;
+    width: 132px;
+    margin: 10px auto;
+    border: 2px solid  black;
+
+    font-size: 2.5rem;
+    white-space: pre-line;/*interactua con el "espaciado" que escribes en el CODIGO html*/
+    /*******************************************************************************************/
+    overflow: hidden;
+    text-overflow: ellipsis;/*texto que sale de su contenedor*/
+    /*Tambien se utiliza "word-break ó word-wrap" para hacer que el texto salte de linea si excede al ancho de la caja*/
+    /*---------------------------------------------------------------------------------*/
+    
+   /* @@ writing-mode: vertical-lr;(Modo de escritura)
+      @@ text-orientation: upright;(Orientacion de texto)
+    */
+    text-transform: uppercase; /*Convertir tu texto en mayusculas,minusculas*/
+}

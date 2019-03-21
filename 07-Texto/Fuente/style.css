@@ -1,0 +1,11 @@
+.fuente{
+    font-size: 5em; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;/*FUENTE DE LETRA*//*"googlefonts" para ayuda*/
+                /*Si no esta la 1ra fuente, pasa a la de la derecha (siempre debes terminar con una "familia genérica")*/
+    font-weight: bold;/*grosor de letra*//*tambien puedes usar valores numericos*/
+    font-style: normal;/*estilo del texto*/
+    font-variant: small-caps;/*varia la fuente*/
+    /*Shorthand*/
+    font:bold normal 5em Tahoma; /*font-family y font-size OBLIGATORIOS*/
+    /*USAR LA FUENTE QUE QUIERAS(AUNQUE NO SE ENCUENTRE) ----> @font-face{}*/
+}

@@ -37,3 +37,6 @@
 .Background-class:hover ul{
     display: block;
 }
+.Text-class:hover ul{
+    display:block;
+}
