@@ -1,0 +1,149 @@
+/*PSEUDOCLASES: (selectores especiales)Estilos especiales dependiendo del contexto,posicion o estado.
+    1.-":root"
+    2.-":hover"
+    3.-":active"
+    4.-":target"
+    5.-":nth-child"/":first-child"/":last-child"
+    6.-":nth-of-type"/":nth-first-of-type"/":nth-last-of-type"
+    7.-":not"
+    8.-":empty"
+*/
+/**********************************************************************************************/
+:root{/*Tiene un mayor peso de importancia root que la etiqueta html*/
+    --custom-red-color:rgba(165, 42, 35, 0.5);
+    --custom-blue-color:#007BDF;
+    --custom-orange-color:#FBA905;
+    --custom-black-color:#282D31;
+    --custom-white-color:#FAFDFF;
+    --font-main:sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+    --header-height: 8rem;
+    --max-width: 1200px;
+}
+/**********************************************************************************************/
+html{
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    background-color: var(--custom-blue-color);
+    color: var(--custom-white-color);
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+li{
+    margin-left: 2rem;
+}
+p{
+    margin-bottom: 1rem;
+}
+p:empty{
+    margin-bottom: 0;
+}
+a{
+    color:var(--custom-blue-color);
+    transition: color .3s ease-in;
+}
+/**********************************************************************************************/
+a:hover{
+    color:var(--custom-black-color);
+}
+/*********************************************************************************************/
+.Header{
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    height: var(--header-height);
+    text-align:center;
+    background-color:var(--custom-black-color);
+    color: var(--custom-white-color);
+    font-size: 1.25rem;
+}
+.Main{
+    padding: 9rem 1rem 0;/*propiedad calc*/
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+.Main h2{
+    color: var(--custom-white-color);
+}
+.Main article{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--custom-black-color);
+    color: var(--custom-orange-color);
+    transition: all.5s ease-out;
+}
+/***********************************************************************************************/
+.Main article:hover{
+    background-color: var(--custom-orange-color);
+    color: var(--custom-black-color);
+}
+.Main article:active{
+    background-color:var(--custom-red-color);
+    color: var(--custom-black-color);
+}
+.Main article:nth-child(3)/*Tercer elemento hijo*/{
+    /*o si escribes "odd"(PARES)/ "even"(impar)/ cada "n numeros"*/
+    background-color:brown;
+}/*SE DEBE PONER LA PSEUDOCLASE ANTES DE HOVER Y ACTIVE PARA QUE SE VEAN LOS CAMBIOS DE ELLOS EN EL TERCER HIJO*/
+.Main article:nth-child(3):hover{
+    background-color: var(--custom-orange-color);
+    color: var(--custom-black-color);
+}
+.Main article:nth-child(3):active{
+    background-color:var(--custom-red-color);
+    color: var(--custom-black-color);
+}
+/**********************************************************************************************/
+.Modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100vh;
+    background-color: var(--custom-red-color);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+/************************************************************************************************/
+.Modal:target{
+    display:flex;
+}
+/************************************************************************************************/
+.Modal-box{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   background-color: rgba(25,60,250,.5);
+}
+.Modal form{
+    display: flex;
+    flex-direction: column;
+}
+/*EJEMPLO PSEUDOCLASE "OF-TYPE"*/
+/* .Modal input:nth-of-type(even){
+    margin-bottom:.5rem;
+    padding: .5rem;
+    border:thin solid black;
+    background-color: #FBA905;
+    color: #282D31;
+} */
+.Modal input:not([type^="submit"]){ /*pseudoclase NOT realiza los cambios a excepcion del elemento entre parentesis*/
+    margin-bottom:.5rem;
+    padding: .5rem;
+    border:thin solid black;
+    background-color: #FBA905;
+    color: #282D31;
+}
+
+

@@ -40,3 +40,6 @@
 .Text-class:hover ul{
     display:block;
 }
+.Pseudoclass:hover ul{
+    display:block;
+}
