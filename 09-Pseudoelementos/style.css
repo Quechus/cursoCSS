@@ -1,0 +1,38 @@
+/*PSEUDOELEMENTOS:
+    ::first-line / ::fi-letter
+    ::before / ::after
+    NOTA:javascript no puede acceder a estos elementos como tal
+*/
+html{
+    box-sizing: border-box;
+}
+body{
+    font-size: 2.5em;
+}
+/***********************************************************************************************/
+p::first-line{/*el cambio lo efectua solo a la 1RA LINEA*/
+   color: red;
+   /* background-color: cadetblue; */
+}
+p::first-letter{
+    font-size:2.3em;
+    /* background-color: greenyellow; */
+    margin-right: 0.1em;
+    float: left;/*propiedad que permite que un elemento se mueva ROMPIENDO el flujo (solo para                  elementos en bloque)*/
+    line-height: 1;
+    font-family: serif;
+}
+/************************************************************************************************/
+/*before y after no apunta a ningun contenido, sino que tu lo debes generar*/
+h1{
+    quotes: '"' '"';
+}
+h1::before{/*Al inicio del elemento*/
+    content:open-quote;
+    /*content: attr(class) ----- puede imprimir el nombre de la clase que le pusiste a tu etiqueta html*/
+    /*content: url()*----- puede imprimir imagenes sin la necesidad de agregarlas a tu html*/
+    
+}
+h1::after{/*Al final del elemento*/
+    content:close-quote;
+}

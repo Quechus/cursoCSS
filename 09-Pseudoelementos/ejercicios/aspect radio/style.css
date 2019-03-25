@@ -1,0 +1,13 @@
+:root{
+    font-size: 1rem;
+}
+.box{
+    width: 400px;
+    background-color: red;
+}
+.box::before{
+    content: ' ';
+    display: block;
+    padding-bottom: 56.25%;
+}
+/*gracias al pseudoelemento se pudo crear el cuadrado*/

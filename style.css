@@ -43,3 +43,6 @@
 .Pseudoclass:hover ul{
     display:block;
 }
+.PseudoEclass:hover ul{
+    display:block;
+}
