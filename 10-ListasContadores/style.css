@@ -1,0 +1,43 @@
+/*Listas y Contadores
+    listas: ul,ol,li
+*/
+body{
+    padding: 1em;
+}
+/***podemos cambiar el display de los span inline a LIST-ITEM para que se vean como elem de una tabla***/
+.span-item span{
+    display:list-item;
+}
+/*********************************************************************************************/
+li{
+    list-style-type: none /*disc,circle.square,decimal,lower-alpha*/; /*Tipo de marcador (estilo)*/
+    /*list-style-image: url(./img/3792039-death-grim-halloween-reaper_109003.ico);/*NOTA:la desventaja de esta propiedad es que no puedes redimencionar el tamaño de la imagen que pongas*/
+    list-style-position: inside;/*definen si las viñetas estan dentro del li o no*/
+   
+}
+/*Si deseas poner imagenes en tus list item mejor hacerlo de la sig forma:*/
+li::before{
+    content: '';
+    /* background: url(./img/chek.png);
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: .5em; */
+   
+}
+/*----------------------------------------------------------------------------------------*/
+/**Si tienes una viñeta "a. item 1"; no puedes cambiarle nada de estilo a la viñeta UNICAMENTE.Por lo que para ello se utilizan los CONTADORES*/
+/*Se declara el contador en el papa*/
+.chapters{
+    counter-reset: chapters; /*crea y resetea un contador en chapters*/
+}
+.chapter{
+    counter-increment: chapter;/*incrementa el contador en chapter*/
+}
+.chapter::before{
+    content: counters(chapter,'.')'.';/*asigna VISUALMENTE el contador*/
+    color: red;
+    margin-right: .25em;
+}
+/*counters solo sirve para listas ANIDADAS*/

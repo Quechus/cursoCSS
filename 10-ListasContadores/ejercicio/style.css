@@ -1,0 +1,21 @@
+.temary{
+    counter-reset: class;
+}
+.class{
+    counter-increment: class;
+    counter-reset: topics;
+}
+.class-tittle::before{
+    display: inline;
+    content: counter(class)'.';
+}
+.class-topic{
+    counter-increment: topics;
+    padding: .2em;
+    margin-left: 2em;
+}
+.class-topic::before{
+    content: counter(class)'. ' counter(topics)'. ';
+    color: red;
+    font:bold normal 1em Tahoma;
+}

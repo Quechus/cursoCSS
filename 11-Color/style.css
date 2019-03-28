@@ -1,0 +1,44 @@
+/*Color:
+background - background-color - currentcolor - color---->Propiedades
+keyword de colores HTML------transparent
+*/
+/*
+RGB (Red Green Blue)
+    rgb()-------rgba()----a de OPACIDAD(tranparencia)
+    (255,255,255)--blanco/(0,0,0,)--negro/(mismonivel)--gris
+ HEXADECIMAL: #RRGGBB
+*/
+/*
+HSL(RECOMENDADO)
+    HUE(Tonalidad de color , de 0 a 360,circulo cromatico)
+    Saturacion (intensidad de color,de gris 0% al color puro 100%)
+    Luminosidad(de negro 0%, color puro 50%, blanco 100%)
+*/
+/*
+DEGRADADOS(imagenes)
+    degradados radiales
+    degradados lineales
+*/
+body{
+    min-height: 100vh;
+    background-color: cyan;
+    background-color: rgb(0, 255, 255);
+    background-color: hsl(180, 100%, 50%);
+    background:linear-gradient(lime,yellow,red);
+    background:linear-gradient(lime 30%,red 40%);
+    background:linear-gradient(to top left,lime,yellow,red);/*1er parametro el angulo*/
+    /*shrthands: to top, to bottom, to left, to right ó to top left........etc*/
+    background: radial-gradient(at 0 0,yellow,red,green);/*posicio (x,y)moviendo el centro*/
+    background: radial-gradient(500px 200px ellipse,yellow,cyan,purple);/*radio x,y*/
+    background: radial-gradient(closest-side circle,yellow 75%,red 95%);
+}
+.box{
+    width: 600px;
+    height: 600px;
+    margin: 100px auto;
+    
+    /**YING-YANG**/
+    border-radius: 50%;
+    box-shadow:0 0 0 2px black;
+    background-image:radial-gradient(closest-side circle at 50% 75%,white 20%,transparent 10%),radial-gradient(closest-side circle at 50% 25%,black 20%,transparent 10%),radial-gradient(closest-side circle at 50% 75%,black 100%,transparent 100%),radial-gradient(closest-side circle at 50% 25%,white 100%,transparent 50%),linear-gradient(to right,white 50%,black 50%) ;
+}

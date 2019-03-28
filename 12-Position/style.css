@@ -1,0 +1,57 @@
+/*
+Position:modelo que permite poner un elemento donde desees
+    influyen 2 cosas: FLUJO Y ESPACIO RESERVADO
+
+    position: static | relative | absolute | fixed | sticky
+
+    ABSOLUTAMENTE todos los elementos comienzan estando en STATIC.
+
+    propiedades: "offset" son aquellas que mueven un elemento posicionado:
+        *top || *right || *bottom || *left
+    
+    RELATIVE:*su referencia es su posicion inicial
+        *aplicar position relative no modifica su layout
+        *al moverlo con la propiedades offset su espacio se reserva
+
+    ABSOLUTE:*pierde su posicion en el flujo y no reserva su espacio
+        *si tenia dimensiones automaticas (width,height) se mantienen en su sitio
+        *su referencia es su ANCESTRO posicionado mas cercano (CUALQUIER POSITION)
+
+    NOTA: Comunmente se utiliza position relative para el papá y absolute para el hijo
+
+*/
+h1{
+    position: relative;
+    left: 200px;/*ya se puede desplazar gracias a que ya tiene position*/
+}
+.p1{
+    width: 50%;
+    color: red;
+    /* float: left;FLOAT mueve los elementos hacia cierto lado*/
+} 
+.p2{
+    width: 50%;
+    color: green;
+    /* float: right; */
+}
+.p3{
+    color: blue;
+}
+.BOX{
+    position:relative;
+    background-color: yellow;
+    width: 300px;
+    height: 500px;
+    
+}
+span{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    border: 1px solid black;
+}
+.button{
+    position: absolute;
+    top: 30px;
+    right: 120px;
+    }

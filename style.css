@@ -9,6 +9,8 @@
 /* TEMAS */
 .class-select {
     background-color: blue;
+    margin: 0;
+    padding-left: 0;
     color: aqua;
 }
 .hide-clases>ul{

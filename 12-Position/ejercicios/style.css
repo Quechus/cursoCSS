@@ -1,0 +1,43 @@
+.menu{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;/*Hace que se pongan uno a lado de otro*/
+    background: cyan;
+}
+.submenu{
+     position: absolute; 
+     top: 100%; 
+     display: none;
+}
+.submenu .submenu{
+    top: 0;
+    left: 100%;
+    display: none;
+}/*Ya no es necesario crear mas sub-menus*/
+/* .submenu .submenu{
+    top: 0; 
+    left: 100%;
+} */
+.menu-link{
+    text-decoration: none;
+    display: block;
+    padding: 1.5em;
+}
+.menu-item{
+    position: relative; 
+}
+.menu-item:hover{
+    background: yellow;
+}
+.menu-item:hover  > .submenu{
+    display: block;
+}
+
+/*Asi solamente va a seleccionar al hijo directo del sub-item, evitando que aparezcan todos al instante*/
+
+
+/* .menu-item:hover > .sub-submenu{
+    display: block;
+} */
+
