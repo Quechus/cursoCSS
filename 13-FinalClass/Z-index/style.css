@@ -1,0 +1,45 @@
+/*Z-INDEX (APILAMIENTO)*/
+:root{
+    /*recomendable usar variables en los z index*/
+    --z-back:-10;/*con un negativo se va atras*/
+    --z-normal:1;
+    --z-tootltip:10;
+    --z-fixed:100;
+    --z-modal:1000;
+}
+.dad{
+    width: 500px;
+    height: 500px;
+    background: hsla(60,100%,50%,.5);
+    position: relative;
+    overflow: hidden;/*Los hijos que esten afuera de su padre son ocultados*/
+}
+.son{
+    --size:100px;
+    width:var(--size);
+    height:var(--size);
+    text-align: center;
+    font-size: 3em;
+    line-height: var(--size);
+    position: absolute;
+    opacity: .85;
+}
+/*Cambiaremos el orden de apilacion con z index*/
+.son:first-child{
+    background: hsla(300,100%,50%);
+}
+.son:nth-child(2){
+    background: hsla(220,100%,50%);
+    top: 75px;
+    left: 75px;
+    z-index: var(--z-normal);/*los demas tienen por defecto 0 por lo que se le dara prioridad en el apilamiento*/
+}
+.son:last-child{
+    background: hsla(110,100%,30%);
+    top: 500px;
+    left: 500px;
+}
+.dad:hover .son:last-child{
+    top:175px;
+    left:175px;
+}

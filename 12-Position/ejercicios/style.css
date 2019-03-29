@@ -6,7 +6,7 @@
     background: cyan;
 }
 .submenu{
-     position: absolute; 
+     position: absolute;  
      top: 100%; 
      display: none;
 }
@@ -15,17 +15,13 @@
     left: 100%;
     display: none;
 }/*Ya no es necesario crear mas sub-menus*/
-/* .submenu .submenu{
-    top: 0; 
-    left: 100%;
-} */
 .menu-link{
     text-decoration: none;
     display: block;
     padding: 1.5em;
 }
 .menu-item{
-    position: relative; 
+     position: relative;  
 }
 .menu-item:hover{
     background: yellow;

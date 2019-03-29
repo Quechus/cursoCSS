@@ -1,0 +1,33 @@
+/*Position parte 2:
+    FIXED: *fijo, relativo al viewport
+        *no se mueve con el scroll
+        *se ignora en el flujo
+        *sus dimensiones se restringen a su contenido
+    STICKY: *(AUN NO TIENE UN SOPORTE ABSOLUTO)
+            * combinacion entre los positions RELATIVE y STICKY
+            *cuando hagas scroll al pasar por un elemento sticky ; este pasara de ser relative a fixed
+*/
+.header{
+    position: fixed;
+    background-color: yellow;
+    width: 100%;
+    top: 0;
+}
+.header-img{
+    height: 2rem;
+}
+.header-tittle{
+    position: absolute;
+    display: inline-block;
+    margin-top: 0;
+    top: 0.1em;
+}
+body{
+    padding-top: 0.1rem;
+}
+main{
+    padding-top: 0.1rem;
+}
+:target{
+    padding-top: 2rem;
+} 

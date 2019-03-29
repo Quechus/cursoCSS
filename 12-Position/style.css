@@ -6,16 +6,18 @@ Position:modelo que permite poner un elemento donde desees
 
     ABSOLUTAMENTE todos los elementos comienzan estando en STATIC.
 
-    propiedades: "offset" son aquellas que mueven un elemento posicionado:
+    propiedades: "offset" son aquellas que mueven un elemento una vez posicionado:
         *top || *right || *bottom || *left
     
     RELATIVE:*su referencia es su posicion inicial
         *aplicar position relative no modifica su layout
         *al moverlo con la propiedades offset su espacio se reserva
+        (si se mueve,queda un hueco en el espacio que ocupaba)
 
     ABSOLUTE:*pierde su posicion en el flujo y no reserva su espacio
         *si tenia dimensiones automaticas (width,height) se mantienen en su sitio
         *su referencia es su ANCESTRO posicionado mas cercano (CUALQUIER POSITION)
+        (SE SALE DEL FLUJO. TODOS LOS DEMAS ELEMENTOS LO IGNORAN)
 
     NOTA: Comunmente se utiliza position relative para el papá y absolute para el hijo
 
