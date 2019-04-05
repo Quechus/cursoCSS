@@ -8,89 +8,71 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header"><h1>CURSO CSS</h1></header>
-    <hr>
-    <!-- TEMAS -->
-    <ul class="class-select">
-        <li class="introduccion-class hide-clases alinear"><label for="ul">Introduccion</label>
-            <ul><li><a href="./01-Introduccion/index.html">Crear archivo CSS</a></li></ul>
-        </li>
-        <li class="selectores-class hide-clases alinear"><label for="ul">Selectores</label>
-            <ul class="inside-option">
-                <li><a href="./02-Selectores/declaracion.html">Como declarar un selector</a></li>
-                <li><a href="./02-Selectores/selector universal/selectores.html">Selector universal</a></li>
-                <li><a href="./02-Selectores/selectores agrupados/agrupados.html">Selectores agrupados</a></li>
-                <li><a href="./02-Selectores/selectores atributos/atributos.html">Selectores atributos</a></li>
-                <li><a href="./02-Selectores/selectores descendientes/descendientes.html">Selectores descendientes</a></li>
+    <div class="header-div">
+        <header>
+            <h1>CURSO CSS</h1>
+        </header>
+    </div>
+    <div class="nav-div">
+        <nav>
+            <ul class="menu">
+                <li class="menu-item"><a class="menu-link" href="./01-Introduccion/index.html">Introduccion</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Selectores</a>
+                    <ul class="menu submenu">
+                        <li class="menu-item"><a class="menu-link" href="./02-Selectores/selector universal/selectores.html">Selector universal</a></li>
+                        <li class="menu-item"><a class="menu-link" href="./02-Selectores/selectores agrupados/agrupados.html">Selectores agrupados</a></li>
+                        <li class="menu-item"><a class="menu-link" href="./02-Selectores/selectores atributos/atributos.html">Selectores atributos</a></li>
+                        <li class="menu-item"><a class="menu-link" href="./02-Selectores/selectores descendientes/descendientes.html">Selectores descendientes</a></li>
+                        <li class="menu-item"><a href="./02-Selectores/declaracion.html" class="menu-link">Declaracion</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="#">Especificidad-Herencia-Cascada</a>
+                    <ul class="menu submenu">
+                        <li class="menu-item"><a href="./03-Especificidad-Herencia-Cascada/especificidad/especificidad.html" class="menu-link">Especificidad</a></li>
+                        <li class="menu-item"><a href="./03-Especificidad-Herencia-Cascada/herencia/herencia.html" class="menu-link">Herencia</a></li>
+                        <li class="menu-item"><a href="./03-Especificidad-Herencia-Cascada/cascada/cascada.html" class="menu-link">Cascada</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="./04-BoxModel/boxModel.html">BoxModel</a></li>
+                <li class="menu-item"><a class="menu-link" href="./05-Bordes_y_Sombras/ByS.html">Bordes y Sombras</a></li>
+                <li class="menu-item"><a class="menu-link" href="./06-Background/background.html">Background</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Texto</a>
+                    <ul class="menu submenu">
+                        <li class="menu-item"><a href="./07-Texto/Fuente/font-1.html" class="menu-link">Fuente</a></li>
+                        <li class="menu-item"><a href="./07-Texto/Tipografia/text-1.html" class="menu-link">Tipografia</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="./08-Pseudoclases/pseudo.html">Pseudoclases</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Pseudoelementos</a>
+                    <ul class="menu submenu">
+                        <li class="menu-item"><a href="./09-Pseudoelementos/pseudoe.html" class="menu-link">Declaracion</a></li>
+                        <li class="menu-item"><a href="./09-Pseudoelementos/ejercicios/aspect radio/as.html" class="menu-link">Ejercicio 1:aspect radio</a></li>
+                        <li class="menu-item"><a href="./09-Pseudoelementos/ejercicios/corazon/heart.html" class="menu-link">Ejercicio 2:corazon</a></li>
+                        <li class="menu-item"><a href="./09-Pseudoelementos/ejercicios/formatearCoin/coin.html" class="menu-link">Ejercicio 3: formatearCoin</a></li>
+                        <li class="menu-item"><a href="./09-Pseudoelementos/ejercicios/subrayado animado/sa.html" class="menu-link">Ejercicio 4:subrayado animado</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="#">ListasContadores</a>
+                    <ul class="menu submenu">
+                        <li class="menu-item"><a href="./10-ListasContadores/LC.html" class="menu-link">Declaracion</a></li>
+                        <li class="menu-item"><a href="./10-ListasContadores/ejercicio/ej.html" class="menu-link">Ejercicio</a></li>
+                    </ul>
+                </li>
+                <li class="mneu-item"><a class="menu-link" href="./11-Color/color.html">Color</a></li>
+                <li class="menu-item"><a class="menu-link" href="#">Position</a>
+                    <ul class="menu submenu">
+                        <li class="menu-item"><a href="./12-Position/pos.html" class="menu-link">Declaracion</a></li>
+                        <li class="menu-item"><a href="./12-Position/ejercicios/menu_desplegable.html" class="menu-link">Ejercicio:Menu desplegable</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="#">FinalClass</a>
+                    <ul class="menu submenu">
+                        <li class="menu-item"><a href="./13-FinalClass/fixed-sticky/FC.html" class="menu-link">Position fixed-sticky</a></li>
+                        <li class="menu-item"><a href="./13-FinalClass/Z-index/z.html" class="menu-link">Z-index</a></li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-        <li class="EHC-class hide-clases alinear"><label for="ul">Especificidad Herencia y Cascada</label>
-            <ul>
-                <li><a href="./03-Especificidad-Herencia-Cascada/especificidad/especificidad.html">Especificidad</a></li>
-                <li><a href="./03-Especificidad-Herencia-Cascada/herencia/herencia.html">Herencia</a></li>
-                <li><a href="./03-Especificidad-Herencia-Cascada/cascada/cascada.html">Cascada</a></li>
-            </ul>
-        </li>
-        <li class="BM-class hide-clases alinear"><label for="ul">Box Model</label>
-            <ul>
-                <li><a href="./04-BoxModel/boxModel.html">Box Model</a></li>
-            </ul>
-        </li>
-        <li class="BS-class hide-clases alinear"><label for="ul">Bordes y sombras</label>
-            <ul>
-                <li><a href="./05-Bordes_y_Sombras/ByS.html">Bordes y sombras</a></li>
-            </ul>
-        </li>
-        <li class="Background-class hide-clases alinear"><label for="ul">Background</label>
-            <ul>
-                <li><a href="./06-Background/background.html">Background</a></li>
-            </ul>
-        </li>
-        <li class="Text-class hide-clases alinear"><label for="ul">Tipografia y Fuentes</label>
-            <ul>
-                <li><a href="./07-Texto/Tipografia/text-1.html">Tipografia</a></li>
-                <li><a href="./07-Texto/Fuente/font-1.html">Fuente</a></li>
-            </ul>
-        </li>
-        <li class="Pseudoclass hide-clases alinear"><label for="ul">Pseudoclases</label>
-            <ul>
-                <li><a href="./08-Pseudoclases/pseudo.html">Pseudoclases</a></li>
-            </ul>
-        </li>
-        <li class="PseudoEclass hide-clases alinear">
-            <label for="ul">Pseudoelementos</label>
-            <ul>
-                <li><a href="./09-Pseudoelementos/pseudoe.html">Pseudoelementos</a></li>
-            </ul>
-        </li>
-        <li class="LCclass hide-clases alinear">
-            <label for="ul">Listas-Contadores</label>
-            <ul>
-                <li><a href="./10-ListasContadores/LC.html">Listas-Contadores</a></li>
-                <li><a href="./10-ListasContadores/ejercicio/ej.html">ejercicio</a></li>
-            </ul>
-        </li>
-        <li class="Colorclass hide-clases alinear">
-            <label for="ul">Colores</label>
-            <ul>
-                <li><a href="./11-Color/color.html">Colores</a></li>
-            </ul>
-        </li>
-        <li class="Posclass hide-clases alinear">
-            <label for="ul">Position</label>
-            <ul>
-                <li><a href="./12-Position/pos.html">Position absolute y relative</a></li>
-                <li><a href="./12-Position/ejercicios/menu_desplegable.html">Menu desplegable</a></li>
-            </ul>
-        </li>
-        <li class="Zclass hide-clases alinear">
-            <label for="ul">Z-index</label>
-            <ul>
-                <li><a href="./13-FinalClass/fixed-sticky/FC.html">Position sticky fixed</a></li>
-                <li><a href="./13-FinalClass/Z-index/z.html">Z-index</a></li>
-            </ul>
-        </li>
-        
-    </ul>
+        </nav>
+    </div>
 </body>
 </html>

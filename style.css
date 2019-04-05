@@ -1,62 +1,26 @@
-[href*="html"]{
-    text-decoration: none;
-    color: yellow;
-}
-/*Estructura*/
-.header{
-    padding-left: 50px;
-}
-/* TEMAS */
-.class-select {
-    background-color: blue;
-    margin: 0;
+.menu{
+    background: cyan;
+    list-style-type:none;
+    display: flex;
     padding-left: 0;
-    color: aqua;
+    margin:0;
 }
-.hide-clases>ul{
-    display: none;
+.submenu{
+    position: absolute;
+    top: 100%;
+    display: none; 
 }
-.alinear{
-    display: inline-block;
-    padding: 5px;
-}
-/* Interaccion con temas para ver subtemas */
-.selectores-class:hover ul{
+.menu-link{
+    padding: 0.7em;
     display: block;
+    text-decoration: none;
 }
-.introduccion-class:hover ul{
+.menu-item{
+    position: relative;
+}
+.menu-item:hover{
+    background:  yellow;
+}
+.menu-item:hover > .submenu{
     display: block;
-}
-.EHC-class:hover ul{
-    display:block;
-}
-.BM-class:hover ul{
-    display: block;
-}
-.BS-class:hover ul{
-    display: block;
-}
-.Background-class:hover ul{
-    display: block;
-}
-.Text-class:hover ul{
-    display:block;
-}
-.Pseudoclass:hover ul{
-    display:block;
-}
-.PseudoEclass:hover ul{
-    display:block;
-}
-.LCclass:hover ul{
-    display:block;
-}
-.Colorclass:hover ul{
-    display:block;
-}
-.Posclass:hover ul{
-    display:block;
-}
-.Zclass:hover ul{
-    display:block;
 }
