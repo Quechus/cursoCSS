@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body{
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+  font-family: 'Open Sans', sans-serif;
+  background: rebeccapurple;
+}
+/*GENERAL*/
+[class*="face"]{
+    margin: 16px;
+    padding: 4px;
+    
+    width: 104px;
+    height: 104px;
+    object-fit: contain;
+    
+    background-color: whitesmoke;
+    border-radius: 10%;
+    box-shadow: 0 0 2px 2px black, 0 0 2px 5.5px green;
+}
+.pip{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px black;
+  }
+/**ORGANIZAR PIP EN CARAS**/
+.first-face{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.second-face{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    
+}
+.second-face .pip:nth-child(2){
+    align-self: flex-end;
+}

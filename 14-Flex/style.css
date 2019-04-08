@@ -1,0 +1,29 @@
+*,::before,:after{
+    box-sizing: border-box;
+}
+/*para flex hay que tener en cuenta dos ejes "main" y el "cross"*/
+.flex-container{
+    width: 1000px;
+    height: 800px;
+    margin:100px auto;
+    border: 0.5em dotted black;
+
+    display: flex;/*Esto hace que sus HIJOS DIRECTOS se conviertan en flex-items*/
+    flex-direction: row; /*detalla el como se organizaran de sus items (altera el sentido de ejes)*/
+    flex-wrap: wrap;/*define si sus elementos se pondran en una o varias lineas*/
+    justify-content: center;/*define su posicion respeco al main*/
+    align-items: center;/*define su posicion respecto al cross*/
+    align-content: stretch;  
+}
+.flex-item{
+    width: 490px;
+    height: 20%; 
+    background: red;
+    border: 0.1em dashed black;
+
+    align-self: center;/*similar al "align-items" con la peculiaridad de que SOLO AFECTA AL ITEM EN DONDE SE REALIZA*/
+}
+
+/*
+https://ed.team/blog/guia-definitva-de-flexbox-1-main-axis-y-cross-axis
+*/
