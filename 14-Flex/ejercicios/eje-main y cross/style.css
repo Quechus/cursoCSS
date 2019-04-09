@@ -7,9 +7,16 @@ body{
   justify-content: center;
   vertical-align: center;
   flex-wrap: wrap;
+  flex-direction: row;
   align-content: center;
   font-family: 'Open Sans', sans-serif;
   background: rebeccapurple;
+}
+[class*="face"]:hover{
+  background-color: rgb(200, 200, 200);
+}
+[class*="face"]:active{
+  background-color: black;
 }
 /*GENERAL*/
 [class*="face"]{
@@ -39,6 +46,7 @@ body{
   justify-content: center;
   align-items: center;
 }
+/**/
 .second-face{
     display: flex;
     flex-direction:row;
@@ -48,3 +56,57 @@ body{
 .second-face .pip:nth-child(2){
     align-self: flex-end;
 }
+/**/
+.third-face{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.third-face .pip:nth-child(2){
+  align-self: center;
+}
+.third-face .pip:last-child{
+  align-self: flex-end;
+}
+/**/
+.fourth-face{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fourth-face .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/**/
+.fifth-face{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fifth-face .column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fifth-face .column:nth-child(2){
+  align-self: center;
+}
+/**/
+.sixth-face{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sixth-face .column{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* ********************* */
+footer{
+  align-self: flex-end;
+}
+
+
