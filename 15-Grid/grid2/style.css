@@ -1,0 +1,29 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(6,80px);
+    /* grid-template-rows: repeat(4,100px); */
+    /*GRID-AUTO permite establecer un tamaño para las nuevas filas o columnas que se generen*/
+    grid-auto-rows: 100px;
+    grid-auto-columns: 80px; /*anteriormente ya se tenia un tamaño para columnas;por lo tanto estas se daran solo para las nuevas que se generen*/
+    grid-gap: 5px;
+    /*para rellenar los huecos utilizamos grid-auto-flow (define el sentido del grid similar a "flex-direction")*/
+    grid-auto-flow: row dense ;/*estamos diciendo que la direccion es en filas(row) y "dense" para rellenar los huecos con los items siguientes del grid*/
+}
+.item{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.item:nth-child(5){
+    grid-column: 7/9;
+  /*  grid-column: 7/10;/*Si en la declaracion NO EXISTE la posicion propuesta entonces el contenido se adapta hasta tener la posicion solicitada (GRID IMPLICITO)*/
+   /* grid-row: 6/20;*/
+}
+.item:nth-child(14){
+    grid-column: 5/9;
+}
+button{
+    margin: 10px 200px;
+    outline: 5px solid red;
+}

@@ -1,0 +1,32 @@
+.container{
+    display: grid; /*display cuadriculado*/
+    grid-template-rows:repeat(3,250px);/*numero de filas que tendra tu contenedor*/
+    grid-template-columns: repeat(5,150px);/*numero de columnas*/
+    grid-gap: 10px;/*espaciado entre cada una de ellas*/
+    /*NOTA: "fr" denota fracciones. se pueden agregar a los templates valores en porcentaje */
+    /*NOTA: #auto-fit# permite que el tamaño de columnas se adapte al tamaño de la ventana (responsive)*/
+}
+.item{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 2px dashed black;
+}
+.item:nth-child(even){
+    background-color: green;
+}
+.item:first-child{
+    grid-column: 2 / span 3;/*"span #" hace que ya sea la fila o la columna se expanda respecto al numero de tracks que estableces respecto al sentido row o column*/
+    grid-row: 2 / span 2;
+    /*GRID-COLUMN: [START]/[END]*/
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*adapta la imagen completamente a su contenedor*/
+}
+button{
+    margin: 10px 140px;
+    outline: 5px solid red;
+}
